@@ -26,3 +26,4 @@ const HomePage = ({history}) => (
     </IonContent>
   </>
 )
+export default HomePage
