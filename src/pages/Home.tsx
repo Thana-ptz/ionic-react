@@ -1,8 +1,7 @@
 import React from 'react';
 import { IonToolbar, IonTitle, IonContent, IonCard, IonHeader, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonButton } from '@ionic/react'
 
-
-const HomePage = ({history}) => (
+const HomePage: React.FC = () => (
   <>
     <IonHeader>
       <IonToolbar color="primary">
@@ -18,9 +17,7 @@ const HomePage = ({history}) => (
         <IonCardContent>
           <p>Sounds like a great idea. Click the button below!</p>
 
-          <IonButton onclick={(e) => {
-            e.preventDefault();
-            history.push('/blog')}}>Blog</IonButton>
+          <IonButton>Blog</IonButton>
         </IonCardContent>
       </IonCard>
     </IonContent>
