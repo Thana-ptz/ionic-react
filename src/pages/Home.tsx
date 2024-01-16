@@ -1,6 +1,26 @@
 import React from 'react';
 import { IonToolbar, IonTitle, IonContent, IonCard, IonHeader, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonButton } from '@ionic/react'
 
+import { useHistory } from 'react-router-dom';
+
+const MyComponent = () => {
+  const history = useHistory();
+
+  const handleBlogButtonClick = () => {
+    // Navigate to the 'blog' route when the button is clicked
+    history.push('/blog');
+  };
+
+  return (
+    <div>
+      {/* Your component content */}
+      <button onClick={handleBlogButtonClick}>Go to Blog</button>
+    </div>
+  );
+};
+
+export default MyComponent;
+
 const HomePage: React.FC = () => (
   <>
     <IonHeader>
@@ -17,10 +37,7 @@ const HomePage: React.FC = () => (
         <IonCardContent>
           <p>Sounds like a great idea. Click the button below!</p>
 
-          <IonButton>Blog</IonButton>
-          <IonButton onclick={(e) => {
-            e.preventDefault();
-            history.push('/blog')}}>Blog</IonButton>
+          <MyComponent />
         </IonCardContent>
       </IonCard>
     </IonContent>
