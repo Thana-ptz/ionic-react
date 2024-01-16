@@ -5,7 +5,7 @@ const HomePage: React.FC = () => (
   <>
     <IonHeader>
       <IonToolbar color="primary">
-        <IonTitle>Home Page</IonTitle>
+        <IonTitle>THANA Business</IonTitle>
       </IonToolbar>
     </IonHeader>
     <IonContent>
