@@ -17,7 +17,8 @@ const HomePage: React.FC = () => (
         <IonCardContent>
           <p>Sounds like a great idea. Click the button below!</p>
 
-          <IonButton>Blog</IonButton>
+          <IonButton routerLink="/blog">Blog</IonButton>
+          
         </IonCardContent>
       </IonCard>
     </IonContent>
