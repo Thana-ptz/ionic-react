@@ -1,7 +1,8 @@
 import React from 'react';
 import { IonToolbar, IonTitle, IonContent, IonCard, IonHeader, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonButton } from '@ionic/react'
 
-const HomePage = () => (
+
+const HomePage = ({history}) => (
   <>
     <IonHeader>
       <IonToolbar color="primary">
@@ -17,10 +18,11 @@ const HomePage = () => (
         <IonCardContent>
           <p>Sounds like a great idea. Click the button below!</p>
 
-          <IonButton>Blog</IonButton>
+          <IonButton onclick={(e) => {
+            e.preventDefault();
+            history.push('/blog')}}>Blog</IonButton>
         </IonCardContent>
       </IonCard>
     </IonContent>
   </>
 )
-export default HomePage
