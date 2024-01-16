@@ -17,8 +17,10 @@ const HomePage: React.FC = () => (
         <IonCardContent>
           <p>Sounds like a great idea. Click the button below!</p>
 
-          <IonButton routerLink="/blog">Blog</IonButton>
-          
+          <IonButton>Blog</IonButton>
+          <IonButton onclick={(e) => {
+            e.preventDefault();
+            history.push('/blog')}}>Blog</IonButton>
         </IonCardContent>
       </IonCard>
     </IonContent>
