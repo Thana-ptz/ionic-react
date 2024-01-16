@@ -1,26 +1,26 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react';
+import { IonToolbar, IonTitle, IonContent, IonCard, IonHeader, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonButton } from '@ionic/react'
 
-const Home: React.FC = () => {
-  return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Ionic Blank</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent className="ion-padding">
-        The world is your oyster.
-        <p>
-          If you get lost, the{' '}
-          <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/">
-            docs
-          </a>{' '}
-          will be your guide.
-        </p>
-      </IonContent>
-    </IonPage>
-  );
-};
+const HomePage = () => (
+  <>
+    <IonHeader>
+      <IonToolbar color="primary">
+        <IonTitle>Home Page</IonTitle>
+      </IonToolbar>
+    </IonHeader>
+    <IonContent>
+      <IonCard>
+        <IonCardHeader>
+          <IonCardSubtitle>Home Page</IonCardSubtitle>
+          <IonCardTitle>Let's take a look at the blog</IonCardTitle>
+        </IonCardHeader>
+        <IonCardContent>
+          <p>Sounds like a great idea. Click the button below!</p>
 
-export default Home;
+          <IonButton>Blog</IonButton>
+        </IonCardContent>
+      </IonCard>
+    </IonContent>
+  </>
+)
+export default HomePage
